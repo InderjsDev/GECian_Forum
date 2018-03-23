@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.inderjs.cbpgec.gecian.ForumFragment">
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/spinCard"
+        android:backgroundTint="#ececec"
+        android:layout_height="40dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/forumSearch"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:text="Search"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="end"/>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/forumSpinner"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="40dp"
+            android:text="Branch"
+            android:textAllCaps="false"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/linearLayout">
+
+        </android.support.v7.widget.AppCompatSpinner>
+
+    </android.support.v7.widget.CardView>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/forumView">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:id="@+id/forumAddLayout"
+        android:gravity="bottom"
+        android:background="#ffffff"
+        android:weightSum="2"
+        android:paddingTop="5dp"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:id="@+id/forumEt"
+            android:layout_marginLeft="5dp" />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="Add"
+            android:id="@+id/addForumBtn"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:layout_gravity="end"
+            android:background="#df9006"
+            />
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="240dp"
+        android:elevation="100dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/reportCard"
+        app:cardCornerRadius="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Choose a Reason"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="60dp">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="15dp"
+                    android:text="It's annoying or not interesting"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_margin="3dp"
+                    android:text="I think it shouldn't be on GECian"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_margin="3dp"
+                    android:text="It's spam"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:textColor="#dc700c"
+                android:id="@+id/reportCancelTv1"
+                android:text="Cancel"
+                android:textSize="20dp"
+                android:textAllCaps="false"
+                android:layout_marginBottom="15dp"/>
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="28dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="15dp"
+                android:text="Submit"
+                android:id="@+id/reportSubmitBtn1"
+                android:textColor="#fffefe"
+                android:textSize="18dp"
+                android:background="#197ede"
+                android:textAllCaps="false"
+                android:layout_marginRight="25dp"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
